@@ -1,0 +1,1157 @@
+@import "./base.css";
+
+/************************* Reset *************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-family: sans-serif;
+  background: white;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #cdd3e7;
+}
+
+a:hover {
+  color: #3291e6;
+}
+
+/************************* Typography *************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Regular", sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.8em;
+}
+
+h6 {
+  font-size: 0.6em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+/************************* Images *************************/
+
+/* img {
+    max-width: 100%;
+    height: auto;
+  } */
+
+/************************* Layout *************************/
+header {}
+
+footer {
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #ccc;
+}
+
+.font-weight-bold {
+  font-weight: bold !important;
+}
+
+.mx-5p {
+  margin: 0 5%;
+}
+
+/************************* 01 Header Section *************************/
+@import "./header.css";
+
+.header-wrapper {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+}
+
+.logo-wrapper {
+  width: 40px;
+
+  float: left;
+  margin: 0 20px;
+}
+
+.logo {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.nav-links {
+  float: right;
+  margin: 0 20px;
+  position: relative;
+}
+
+.nav-links>li {
+  text-decoration: none;
+  float: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.nav-links li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  display: block;
+  background-color: white;
+  margin-top: 2px;
+  transition: 0.5s;
+}
+
+.nav-links li>a.active::after {
+  width: 100%;
+}
+
+
+
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/************************* 001 first Section *************************/
+@import "./first_section.css";
+
+.welcomes-section {
+
+  margin-top: 300px;
+
+}
+
+.welcome-title {
+  text-align: center;
+}
+
+.welcome-line {
+  width: 80px;
+  height: 4px;
+  margin: 10px auto 10px;
+  background-color: rgb(128, 139, 236);
+}
+
+.three-cards {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.welcome-content {
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.welcome-card {
+  border: 1px solid black;
+  position: relative;
+  width: 30%;
+  float: left;
+  padding: 30px 15px 30px 70px;
+
+}
+
+.welcome-icon {
+  position: absolute;
+  left: 150px;
+  top: 26px;
+  color: #6195ff;
+  font-size: 30px;
+  display: block;
+}
+
+.welcome-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background-color: #333;
+  z-index: 0;
+  /* color: white; */
+}
+
+.welcome-card:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+
+.welcome-item-title {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  transition: 1s;
+  color: #000;
+  margin-top: 50px;
+}
+
+.welcome-paragraph {
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.welcome-card:hover .welcome-item-title {
+  color: white;
+}
+
+.about-item-link {
+  color: #6195ff;
+  text-decoration: none;
+  margin: 0 45;
+  font-size: 20px;
+}
+
+/************************* 02 Welcome  Section *************************/
+@import "./welcome_section.css";
+
+.first-section-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/ice/hero\ 3.jpg") top center;
+  background-size: cover;
+  margin-bottom: -200px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+}
+
+.first-section-wrapper .overlay .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 65%;
+}
+
+.first-section-wrapper .overlay .container h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.first-section-wrapper .overlay .container h2 {
+  color: #fff;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+.first-section-wrapper .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 35px;
+  margin-top: 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #0000ff;
+}
+
+.first-section-wrapper .btn-get-started:hover {
+  background: #3291e6;
+}
+
+
+/************************* 03 Featured Works Section *************************/
+@import "./featured_work.css";
+
+.portfolio {
+  background-color: #f1f7fd;
+  margin-top: 350px;
+  padding-top: 45px;
+}
+
+.work-section-header {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 35px;
+  text-transform: capitalize;
+  margin-bottom: 9px;
+  margin-top: 6px;
+}
+
+.line {
+  display: block;
+  width: 62px;
+  height: 4px;
+  background-color: royalblue;
+  margin: 0 auto 70px auto;
+}
+
+.work-container {
+  width: 80%;
+  margin: auto;
+}
+
+.portfolio-content {
+  overflow: hidden;
+}
+
+.portfolio-item-wrapper {
+  position: relative;
+  width: 30%;
+  float: left;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.portfolio-item {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.item-img {
+  width: 250px;
+  height: 300px;
+  margin: auto;
+}
+
+.item-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.layer-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 1s;
+}
+
+.layer-info {
+  position: absolute;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.layer-content .category {
+  color: #6195ff;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+  position: relative;
+  top: 15px;
+  transition: 1s;
+}
+
+.layer-content-title {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+  position: relative;
+  top: 15px;
+  transition: 1s;
+  transition-delay: 0.4s;
+}
+
+.layer-content a i {
+  line-height: 40px;
+}
+
+.layer-content a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #6195ff;
+  position: relative;
+  top: 15px;
+  transition: 1s;
+  transition-delay: 0.6s;
+}
+
+.portfolio-item-wrapper:hover .layer-content {
+  opacity: 1;
+}
+
+.portfolio-item-wrapper:hover .category {
+  top: 0;
+}
+
+.portfolio-item-wrapper:hover .layer-content-title {
+  top: 0;
+}
+
+.portfolio-item-wrapper:hover .layer-content a {
+  top: 0;
+}
+
+
+/************************* 04 What We Offer Section *************************/
+@import "./offer_section.css";
+
+.offers-section {
+
+  margin-top: 100px;
+  margin-bottom: 500px;
+
+
+}
+
+.offer-title {
+  text-align: center;
+}
+
+.line {
+  width: 80px;
+  height: 4px;
+
+  margin: 0 auto 10px;
+  background-color: aqua;
+}
+
+.six-cards {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.offer-content {
+  overflow: hidden;
+}
+
+.offer-card {
+  border: 1px solid black;
+  position: relative;
+  width: 30%;
+  float: left;
+  padding: 30px 15px 30px 70px;
+  margin-bottom: 20px;
+}
+
+.gem-icon {
+  position: absolute;
+  left: 15px;
+  top: 26px;
+  color: #6195ff;
+  font-size: 40px;
+}
+
+.offer-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: #333;
+  z-index: 0;
+  /* color: white; */
+}
+
+.offer-card:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.gem-icon {
+  position: absolute;
+  left: 15px;
+  top: 26px;
+  color: #6195ff;
+}
+
+.offer-item-title {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  transition: 1s;
+  color: #000;
+}
+
+.offer-paragraph {
+  color: #999;
+}
+
+.offer-card:hover .offer-item-title {
+  color: white;
+}
+
+
+/************************* 05 Why Choose Us Section *************************/
+@import "./choose_us.css";
+
+.what-we-offer {
+  background-color: #F1F7FD;
+  padding: 40px 0;
+}
+
+.offer-container {
+  width: 80%;
+  margin: auto;
+
+}
+
+.service-item {
+  width: 50%;
+  float: left;
+}
+
+.service-item .service-item-img {
+  width: 100%;
+  height: 400px;
+  background-color: white;
+}
+
+.service-item .service-item-img img {
+  width: 90%;
+  height: 100%;
+  margin: 0 5%;
+}
+
+.section-header {
+  text-align: left;
+}
+
+
+
+
+.section-header .section-title {
+  font-size: 35px;
+  text-transform: capitalize;
+  margin-bottom: 9px;
+  margin-top: 6px;
+}
+
+
+.section-header .what-we-offer-line {
+  display: block;
+  width: 62px;
+  height: 4px;
+  background-color: royalblue;
+  margin-bottom: 70px;
+}
+
+.service-item-desc {
+  padding-right: 20px;
+  color: #999;
+  line-height: 1.4;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.service-list {
+  list-style: none;
+}
+
+.service-list li {
+  margin-bottom: 13px;
+  color: #999;
+}
+
+.service-list li i {
+  border: 1px solid #6195ff;
+  color: #6195ff;
+  padding: 3px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+
+.why-choose-img {
+  width: 480px;
+  height: 400px;
+}
+
+.service-bullets {
+  list-style: none;
+  text-align: center;
+}
+
+.service-bullets li.active {
+  background-color: #6195ff;
+
+}
+
+.service-bullets li:hover {
+  background-color: #6195ff;
+  cursor: pointer;
+}
+
+.service-bullets li {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: #a8a8a8;
+  margin: 10px 5px;
+  border-radius: 50%;
+}
+
+.clear {
+  clear: both;
+}
+
+
+
+/************************* 06 Statistics Section *************************/
+@import "./statistics_section.css";
+
+.numbers {
+  position: relative;
+  background-image: url(../images/gallery/gallery-7.jpg);
+  height: 260px;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 100px 0;
+}
+
+.num1 {
+
+  background-image: url(../images/ice/scroll.jpg);
+  height: 260px;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+
+.number-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 70px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.numbers-items {
+  overflow: hidden;
+}
+
+.number-item {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+.icon {
+  color: #6195ff;
+  margin-bottom: 15px;
+}
+
+
+
+
+.number-item-title {
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+
+}
+
+.number-item-text {
+  color: #fff;
+}
+
+/************************* 07 Pricing Table Section *************************/
+@import "./pricing_table.css";
+
+.pricing-header {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.pricing-header .section-title {
+  font-size: 35px;
+  text-transform: capitalize;
+  margin-bottom: 9px;
+  margin-top: 6px;
+}
+
+.pricing-continer {
+  width: 80%;
+  margin: auto;
+}
+
+.pricing-header .line {
+  display: block;
+  width: 62px;
+  height: 4px;
+  background-color: royalblue;
+  margin: 0 auto 70px auto;
+}
+
+div {
+  display: block;
+}
+
+
+.pricing-item {
+  float: left;
+  width: 30%;
+  padding: 30px 15px;
+  border: 1px solid #a8a8a8;
+  text-align: center;
+  position: relative;
+}
+
+.pricing-item-text {
+  text-transform: uppercase;
+  font-size: 21px;
+  color: #999;
+}
+
+.pricing-item-permonth {
+  width: 100px;
+  height: 100px;
+  padding: 12px 0;
+  margin: 20px auto;
+  border: 2px solid #6195ff;
+  border-radius: 50%;
+}
+
+.doller {
+  font-size: 50px;
+}
+
+.month {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.pricing-list {
+  list-style: none;
+}
+
+.pricing-item-purchase {
+  border: 2px solid #6195ff;
+  margin: auto;
+  padding: 4px;
+  display: block;
+  width: 120px;
+  margin-top: 15px;
+  transition: color 0.5s;
+}
+
+.pricing-item::after {
+  content: "";
+
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s;
+}
+
+.pricing-item:hover::after {
+  height: 100%;
+}
+
+.pricing-item:hover .pricing-item-text {
+  color: red;
+}
+
+.pricing-item:hover .pricing-item-permonth {
+  color: red;
+  transition: 2s;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+/************************* 08 Football Section *************************/
+@import "./football_section.css";
+
+
+.testimonial {
+  position: relative;
+  background-image: url(../images/ice/test.jpg);
+  height: 300px;
+  background-size: cover;
+  background-attachment: fixed;
+
+  margin-top: 500px;
+}
+
+.testimonial-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.testimonial-content {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+}
+
+.testimonial-item {
+  float: left;
+  width: 50%;
+  color: #fff;
+  padding-right: 20px;
+}
+
+.testimonial-toplayer {
+  padding: 90px 20px 10px 150px;
+  position: relative;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.testimonial__card--img {
+  position: absolute;
+  top: 82px;
+  left: 65px;
+  border-radius: 50%;
+}
+
+.testimonial-desc {
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-left: 76px;
+  font-size: 14px;
+}
+
+.testimonial-toplayer span {
+  color: #6195ff;
+}
+
+
+/************************* 09 Our Team Section *************************/
+@import "./our_team.css";
+
+.our-team {
+  margin: 100px 0;
+}
+
+.contener {
+  width: 80%;
+  margin: auto;
+}
+
+.team-card {
+  /* overflow: hidden; */
+}
+
+.team-item {
+  float: left;
+  background-color: rgb(185, 185, 185);
+  width: 30%;
+  padding: 14px 18px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.margin-0-5p {
+  margin: 0px 5%;
+}
+
+.team-img {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.team-img img {
+  width: 100%;
+}
+
+.team-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.team-overlay a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(108, 108, 240);
+  margin-left: auto;
+}
+
+.team-overlay a i {
+  line-height: 40px;
+}
+
+.team-card:hover .team-overlay {
+  visibility: visible;
+  opacity: 0.7;
+}
+
+.team-item::after {
+  position: absolute;
+
+  content: "";
+
+  width: 0;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+  background-color: rgb(3, 3, 3);
+  opacity: 0;
+}
+
+.team-item:hover::after {
+  width: 50%;
+  height: 100%;
+  opacity: 0.5;
+  transition: 2s;
+}
+
+.team-item::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgb(3, 3, 3);
+  opacity: 0;
+}
+
+.team-item:hover::before {
+  width: 50%;
+  height: 100%;
+  opacity: 0.5;
+  transition: 2s;
+  z-index: 2;
+}
+
+/************************* 10 Recent News Section *************************/
+@import "./recent_news.css";
+
+.news-header {
+  text-align: center;
+
+}
+
+.news-header .section-title {
+  font-size: 35px;
+  text-transform: capitalize;
+  margin-bottom: 9px;
+  margin-top: 6px;
+}
+
+.news-header .line {
+  display: block;
+  width: 62px;
+  height: 4px;
+  background-color: royalblue;
+  margin: 0 auto 70px auto;
+}
+
+.news-container {
+  width: 80%;
+  margin: auto;
+}
+
+.blog-content {
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
+
+.blog-item {
+  float: left;
+  width: 30%;
+  background-color: #fff;
+  position: relative;
+}
+
+.blog-item-img {
+  width: 250px;
+  height: 300px;
+  margin-left: 23px;
+}
+
+.blog-info {
+  padding: 20px;
+}
+
+.blog-list {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.blog-list li {
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 5px;
+}
+
+.blog-list li i {
+  color: #6195ff;
+}
+
+.blog-title {
+  font-weight: bold;
+  margin: 20px 0;
+  margin-bottom: 25px;
+}
+
+.blog-desc {
+  color: #999;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.blog-link {
+  color: #6195ff;
+}
+
+.blog-item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  right: 0%;
+  bottom: 0;
+  transition: 1s;
+  opacity: 0;
+  background-color: #6195ff;
+}
+
+.blog-item:hover:after {
+  height: 100%;
+  opacity: 0.5;
+  background-color: black;
+}
+
+.blog-item.mg {
+  margin: 0 5%;
+}
+
+.blog-item-img img {
+  max-width: 100%;
+  height: 100%;
+}
+
+/************************* 11 Footer Section *************************/
+@import "./footer_section.css";
+
+.footer {
+  background-color: #464444;
+  /* background-image:url(../images/ice/f2.jpeg) ; */
+  height: 350px;
+  text-align: center;
+  position: relative;
+  margin-top: 100px;
+
+}
+
+.content__footer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 100%;
+}
+
+.footer-img {
+  width: 200px;
+  height: 150px;
+  margin: 45px auto 0;
+
+}
+
+.footer-img img {
+  width: 100%;
+
+}
+
+.footer-links {
+  margin: 35px auto;
+}
+
+.footer-links a i {
+  color: rgb(134, 134, 231);
+  margin: 5px;
+  font-size: 40px;
+}
+
+.footer-copywrite {
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: white;
+
+}
